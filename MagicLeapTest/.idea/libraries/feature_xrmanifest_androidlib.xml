@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="feature-xrmanifest.androidlib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/xrmanifest.androidlib/build/intermediates/merged_java_res/release/feature-xrmanifest.androidlib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

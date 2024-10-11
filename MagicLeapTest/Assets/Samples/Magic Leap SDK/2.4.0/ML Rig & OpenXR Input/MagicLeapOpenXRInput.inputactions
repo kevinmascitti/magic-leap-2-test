@@ -212,7 +212,7 @@
                     "name": "IsTracked",
                     "type": "Value",
                     "id": "b4aa4314-d7d0-4266-b667-25e31fd39dff",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true

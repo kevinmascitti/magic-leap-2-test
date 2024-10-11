@@ -402,18 +402,6 @@ PrefabInstance:
       propertyPath: m_ActionAssets.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2486813761511367698, guid: 2ad7d02c3ee2a447abc9de300646685d,
-        type: 3}
-      propertyPath: m_ActionAssets.Array.data[0]
-      value: 
-      objectReference: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f,
-        type: 3}
-    - target: {fileID: 2486813761511367698, guid: 2ad7d02c3ee2a447abc9de300646685d,
-        type: 3}
-      propertyPath: m_ActionAssets.Array.data[1]
-      value: 
-      objectReference: {fileID: -944628639613478452, guid: 3d3a02f80461e43258385dd48a3239ae,
-        type: 3}
     - target: {fileID: 2587420837012734618, guid: 2ad7d02c3ee2a447abc9de300646685d,
         type: 3}
       propertyPath: m_RayOriginTransform

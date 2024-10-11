@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Logger = LearnXR.Core.Logger;
@@ -24,6 +25,8 @@ public class InputActionTest : MonoBehaviour
     
     // Threshold for detecting a pinch gesture.
     private float pinchThreshold = 0.2f;
+    int interval = 2;
+    float nextTime = 0;
     
     private void Start()
     {
@@ -35,7 +38,21 @@ public class InputActionTest : MonoBehaviour
         
         // Register callback for pinch action.
         pinchValueInputAction.performed += OnPinchPerformed;
+        
+        // InvokeRepeating("Log", 0, 1);
     }
+
+    private void Log()
+    {
+        // Print pointer position to log.
+        Logger.Instance.LogInfo($"Left Hand Pointer Position: {positionInputAction.ReadValue<Vector3>()}");
+
+        // Print the left hand grasp value to log.
+        Logger.Instance.LogInfo($"Left Hand Grasp Value: {graspValueInputAction.ReadValue<float>()}");
+
+        Logger.Instance.LogInfo($"Left Hand Pinch Value: {pinchValueInputAction.ReadValue<float>()}");
+    }
+
 
     private void Update()
     {
@@ -44,13 +61,14 @@ public class InputActionTest : MonoBehaviour
 
         // Print the left hand grasp value to log.
         Logger.Instance.LogInfo($"Left Hand Grasp Value: {graspValueInputAction.ReadValue<float>()}");
-        
+
         Logger.Instance.LogInfo($"Left Hand Pinch Value: {pinchValueInputAction.ReadValue<float>()}");
     }
-    
+
     // This function is called when the pinch action is performed.
     private void OnPinchPerformed(InputAction.CallbackContext context)
     {
+        Logger.Instance.LogWarning("OnPinchPerformed " + context.ReadValue<float>());
         // Read the pinch value.
         float pinchValue = context.ReadValue<float>();
 
